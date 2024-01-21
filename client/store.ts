@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import signUpReducer from './src/slices/signup'
 
 export const store = configureStore({
     reducer:{
-
+        toggleSignUp: signUpReducer,
     },
 });
 
