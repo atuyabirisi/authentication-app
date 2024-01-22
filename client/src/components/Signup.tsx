@@ -39,9 +39,9 @@ function Signup() {
     const values = getValues();
     console.log({ ...values });
     axios
-      .post("http://localhost:5000/api/register/", { ...values })
+      .post("http://localhost:3000/api/signup/", { ...values })
       .then((res) => {
-        if (res.status === 200) window.location.href = "/verify";
+        if (res.status === 200) window.location.href = "/verification";
         reset();
       })
       .catch((errors) => console.log(errors));
